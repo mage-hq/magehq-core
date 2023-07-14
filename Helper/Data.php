@@ -54,7 +54,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     protected $_license;
 
-    protected $_moduleReader
+    protected $_moduleReader;
      /**
      * @var null|SerializerInterface
      */
