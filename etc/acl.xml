@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magehq
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the magehq.com license that is
+ * available through the world-wide-web at this URL:
+ * https://magehq.com/license.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   magehq
+ * @package    Magehq_Core
+ * @copyright  Copyright (c) 2022 magehq (https://magehq.com/)
+ * @license    https://magehq.com/license.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magehq_Core::magehq_core" title="Magehq"/>
+            </resource>
+        </resources> 
+    </acl>
+</config>

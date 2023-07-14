@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magehq
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the magehq.com license that is
+ * available through the world-wide-web at this URL:
+ * https://magehq.com/license.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   magehq
+ * @package    Magehq_Core
+ * @copyright  Copyright (c) 2022 magehq (https://magehq.com/)
+ * @license    https://magehq.com/license.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+   <menu>
+		<add id="Magehq_Core::magehq_core" title="Magehq"  translate="title" module="Magehq_Core"  dependsOnModule="Magehq_Core" sortOrder="20" resource="Magehq_Core::magehq_core"/>
+      <add id="Magehq_Core::core" title="Magehq Core"  translate="title" module="Magehq_Core" sortOrder="0" resource="Magehq_Core::core" parent="Magehq_Core::magehq_core"/>
+      <add id="Magehq_Core::config_license" title="Setting License" module="Magehq_Core" sortOrder="1" parent="Magehq_Core::core" action="adminhtml/system_config/edit/section/magehqlicense" resource="Magehq_Core::config_license"/> 
+	</menu>
+</config>

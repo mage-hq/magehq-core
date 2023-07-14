@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magehq
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the magehq.com license that is
+ * available through the world-wide-web at this URL:
+ * https://magehq.com/license.html
+ * 
+ * DISCLAIMER
+ * 
+ * Do not edit or add to this file if you wish to upgrade this extension to newer
+ * version in the future.
+ * 
+ * @category   magehq
+ * @package    Magehq_Core
+ * @copyright  Copyright (c) 2022 magehq (https://magehq.com/)
+ * @license    https://magehq.com/license.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Config/etc/system_file.xsd">
+    <system>
+        <tab id="magehq" translate="label" sortOrder="300">
+            <label>Magehq Extensions</label>
+        </tab>
+       <section id="magehqlicense" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Manage Licenses</label>
+            <tab>magehq</tab>
+            <resource>Magehq_Core::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <field id="licenses" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Manage Licenses</label>
+                    <frontend_model>Magehq\Core\Block\Adminhtml\System\ListLicense</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
