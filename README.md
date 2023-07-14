@@ -1,2 +1,2 @@
-# magehq-core
-module magehq core
+# magehqm2-core
+module magehqm2 core

@@ -1,10 +1,10 @@
 <?php
 /**
- * Magehq
+ * Magehqm2
  * 
  * NOTICE OF LICENSE
  * 
- * This source file is subject to the Magehq.com license that is
+ * This source file is subject to the Magehqm2.com license that is
  * available through the world-wide-web at this URL:
  * https://magehq.com/license.html
  * 
@@ -13,13 +13,13 @@
  * Do not edit or add to this file if you wish to upgrade this extension to newer
  * version in the future.
  * 
- * @category   Magehq
- * @package    Magehq_Seo
- * @copyright  Copyright (c) 2022 Magehq (https://magehq.com/)
+ * @category   Magehqm2
+ * @package    Magehqm2_Seo
+ * @copyright  Copyright (c) 2022 Magehqm2 (https://magehq.com/)
  * @license    https://magehq.com/license.html
  */
 
-namespace Magehq\Core\Helper;
+namespace Magehqm2\Core\Helper;
 
 use \Magento\Framework\App\ObjectManager;
 use Magento\Framework\App\Filesystem\DirectoryList;
@@ -51,6 +51,10 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * @var \Magento\Cms\Model\Page
      */
     protected $cmsPage;
+
+    protected $_license;
+
+    protected $_moduleReader
      /**
      * @var null|SerializerInterface
      */
@@ -68,7 +72,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * @param \Magento\Cms\Model\Template\FilterProvider        $filterProvider 
      * @param \Magento\Framework\Registry                       $registry       
      * @param \Magento\Cms\Model\Page                           $cmsPage           
-     * @param \Magehq\Core\Framework\Serialize\Serializer\Json $serializer     
+     * @param \Magehqm2\Core\Framework\Serialize\Serializer\Json $serializer     
      */
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
@@ -76,7 +80,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
         \Magento\Cms\Model\Template\FilterProvider $filterProvider,
         \Magento\Framework\Registry $registry,
         \Magento\Framework\Module\Dir\Reader $moduleReader,
-        \Magehq\Core\Model\License $license,
+        \Magehqm2\Core\Model\License $license,
         \Magento\Cms\Model\Page $cmsPage,
         \Magento\Framework\Serialize\SerializerInterface $serializer,
         \Magento\Framework\Unserialize\Unserialize $unserialize
@@ -102,7 +106,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
      * @param \Magento\Store\Model\Store|int|string $store
      * @return string|null
      */
-     public function getConfig($key, $group = "magehqcore/general", $store = null)
+     public function getConfig($key, $group = "magehqm2core/general", $store = null)
      {
         $store     = $this->_storeManager->getStore($store);
         $websiteId = $store->getWebsiteId();

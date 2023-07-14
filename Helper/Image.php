@@ -1,10 +1,10 @@
 <?php
 /**
- * Magehq
+ * Magehqm2
  * 
  * NOTICE OF LICENSE
  * 
- * This source file is subject to the Magehq.com license that is
+ * This source file is subject to the Magehqm2.com license that is
  * available through the world-wide-web at this URL:
  * https://magehq.com/license.html
  * 
@@ -13,20 +13,20 @@
  * Do not edit or add to this file if you wish to upgrade this extension to newer
  * version in the future.
  * 
- * @category   Magehq
- * @package    Magehq_Seo
- * @copyright  Copyright (c) 2022 Magehq (https://magehq.com/)
+ * @category   Magehqm2
+ * @package    Magehqm2_Seo
+ * @copyright  Copyright (c) 2022 Magehqm2 (https://magehq.com/)
  * @license    https://magehq.com/license.html
  */
 
-namespace Magehq\Core\Helper;
+namespace Magehqm2\Core\Helper;
 
 use Magento\Framework\App\Filesystem\DirectoryList;
 
 class Image extends \Magento\Framework\App\Helper\AbstractHelper
 {
     /**
-     * @var \Magehq\Core\Block\Product\ImageBuilder
+     * @var \Magehqm2\Core\Block\Product\ImageBuilder
      */
     protected $imageBuilder;
 
@@ -47,14 +47,14 @@ class Image extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * @param \Magento\Framework\App\Helper\Context      $context      
-     * @param \Magehq\Core\Block\Product\ImageBuilder   $imageBuilder 
+     * @param \Magehqm2\Core\Block\Product\ImageBuilder   $imageBuilder 
      * @param \Magento\Framework\Filesystem              $filesystem   
      * @param \Magento\Framework\Image\AdapterFactory    $imageFactory 
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager 
      */
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
-        \Magehq\Core\Block\Product\ImageBuilder $imageBuilder,
+        \Magehqm2\Core\Block\Product\ImageBuilder $imageBuilder,
         \Magento\Framework\Filesystem $filesystem,
         \Magento\Framework\Image\AdapterFactory $imageFactory,
         \Magento\Store\Model\StoreManagerInterface $storeManager
@@ -96,7 +96,7 @@ class Image extends \Magento\Framework\App\Helper\AbstractHelper
      * @param  boolean $deleteIfExist 
      * @return string                 
      */
-    public function resize($src, $width = 150, $height = 0, $quality = 80, $dir = 'magehq/resized', $newName = '', $deleteIfExist = false)
+    public function resize($src, $width = 150, $height = 0, $quality = 80, $dir = 'magehqm2/resized', $newName = '', $deleteIfExist = false)
     {
         $dir          = $dir . '/' . $width;
         $absPath      = $this->_filesystem->getDirectoryRead(DirectoryList::MEDIA)->getAbsolutePath($src);

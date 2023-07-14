@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Magehq
+ * Magehqm2
  * 
  * NOTICE OF LICENSE
  * 
@@ -14,9 +14,9 @@
  * Do not edit or add to this file if you wish to upgrade this extension to newer
  * version in the future.
  * 
- * @category   magehq
- * @package    Magehq_Core
- * @copyright  Copyright (c) 2022 magehq (https://magehq.com/)
+ * @category   magehqm2
+ * @package    Magehqm2_Core
+ * @copyright  Copyright (c) 2022 magehqm2 (https://magehq.com/)
  * @license    https://magehq.com/license.html
  */
 -->
@@ -24,7 +24,7 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
-                <resource id="Magehq_Core::magehq_core" title="Magehq"/>
+                <resource id="Magehqm2_Core::magehqm2_core" title="Magehqm2"/>
             </resource>
         </resources> 
     </acl>

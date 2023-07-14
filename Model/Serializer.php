@@ -14,15 +14,15 @@
  * version in the future.
  * 
  * @category   Mageqh
- * @package    Magehq_Core
- * @copyright  Copyright (c) 2022 Magehq (https://magehq.com/)
+ * @package    Magehqm2_Core
+ * @copyright  Copyright (c) 2022 Magehqm2 (https://magehq.com/)
  * @license    https://magehq.com/license.html
  */
 
 /**
  * Serializer
  */
-namespace Magehq\Core\Model;
+namespace Magehqm2\Core\Model;
 
 class Serializer
 {

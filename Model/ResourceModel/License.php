@@ -1,6 +1,6 @@
 <?php
 /**
- * Magehq
+ * Magehqm2
  * 
  * NOTICE OF LICENSE
  * 
@@ -13,13 +13,13 @@
  * Do not edit or add to this file if you wish to upgrade this extension to newer
  * version in the future.
  * 
- * @category   Magehq
- * @package    Magehq_Core
- * @copyright  Copyright (c) 2022 Magehq (https://magehq.com/)
+ * @category   Magehqm2
+ * @package    Magehqm2_Core
+ * @copyright  Copyright (c) 2022 Magehqm2 (https://magehq.com/)
  * @license    https://magehq.com/license.html
  */
 
-namespace Magehq\Core\Model\ResourceModel;
+namespace Magehqm2\Core\Model\ResourceModel;
 
 class License extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
 {
@@ -30,7 +30,7 @@ class License extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
      */
     protected function _construct()
     {
-        $this->_init('magehq_core_license', 'license_id');
+        $this->_init('magehqm2_core_license', 'license_id');
     }
 
     /**

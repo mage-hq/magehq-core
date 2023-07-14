@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Magehq
+ * Magehqm2
  * 
  * NOTICE OF LICENSE
  * 
@@ -14,16 +14,16 @@
  * Do not edit or add to this file if you wish to upgrade this extension to newer
  * version in the future.
  * 
- * @category   magehq
- * @package    Magehq_Core
- * @copyright  Copyright (c) 2022 magehq (https://magehq.com/)
+ * @category   magehqm2
+ * @package    Magehqm2_Core
+ * @copyright  Copyright (c) 2022 magehqm2 (https://magehq.com/)
  * @license    https://magehq.com/license.html
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
    <menu>
-		<add id="Magehq_Core::magehq_core" title="Magehq"  translate="title" module="Magehq_Core"  dependsOnModule="Magehq_Core" sortOrder="20" resource="Magehq_Core::magehq_core"/>
-      <add id="Magehq_Core::core" title="Magehq Core"  translate="title" module="Magehq_Core" sortOrder="0" resource="Magehq_Core::core" parent="Magehq_Core::magehq_core"/>
-      <add id="Magehq_Core::config_license" title="Setting License" module="Magehq_Core" sortOrder="1" parent="Magehq_Core::core" action="adminhtml/system_config/edit/section/magehqlicense" resource="Magehq_Core::config_license"/> 
+		<add id="Magehqm2_Core::magehqm2_core" title="Magehqm2"  translate="title" module="Magehqm2_Core"  dependsOnModule="Magehqm2_Core" sortOrder="20" resource="Magehqm2_Core::magehqm2_core"/>
+      <add id="Magehqm2_Core::core" title="Magehqm2 Core"  translate="title" module="Magehqm2_Core" sortOrder="0" resource="Magehqm2_Core::core" parent="Magehqm2_Core::magehqm2_core"/>
+      <add id="Magehqm2_Core::config_license" title="Setting License" module="Magehqm2_Core" sortOrder="1" parent="Magehqm2_Core::core" action="adminhtml/system_config/edit/section/magehqm2license" resource="Magehqm2_Core::config_license"/> 
 	</menu>
 </config>

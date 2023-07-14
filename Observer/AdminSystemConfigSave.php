@@ -1,6 +1,6 @@
 <?php
 /**
- * Magehq
+ * Magehqm2
  * 
  * NOTICE OF LICENSE
  * 
@@ -13,13 +13,13 @@
  * Do not edit or add to this file if you wish to upgrade this extension to newer
  * version in the future.
  * 
- * @category   magehq
- * @package    Magehq_Core
- * @copyright  Copyright (c) 2022 magehq (https://magehq.com/)
+ * @category   magehqm2
+ * @package    Magehqm2_Core
+ * @copyright  Copyright (c) 2022 magehqm2 (https://magehq.com/)
  * @license    https://magehq.com/license.html
  */
 
-namespace Magehq\Core\Observer;
+namespace Magehqm2\Core\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\Module\Dir;
@@ -57,7 +57,7 @@ class AdminSystemConfigSave implements ObserverInterface
                 if($modules){
                     foreach($modules as $key=>$item){
                         $module_license_key = isset($item['value'])?$item['value']:'';
-                            $this->configWriter->save('magehqlicense/general/'.$key,  $module_license_key, ScopeConfigInterface::SCOPE_TYPE_DEFAULT, 0);
+                            $this->configWriter->save('magehqm2license/general/'.$key,  $module_license_key, ScopeConfigInterface::SCOPE_TYPE_DEFAULT, 0);
                             $this->flushCache();
                         
                     }

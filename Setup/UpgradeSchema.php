@@ -14,12 +14,12 @@
  * version in the future.
  * 
  * @category   Landofcoder
- * @package    Magehq_Core
+ * @package    Magehqm2_Core
  * @copyright  Copyright (c) 2017 Landofcoder (https://www.landofcoder.com/)
  * @license    https://www.landofcoder.com/LICENSE-1.0.html
  */
 
-namespace Magehq\Core\Setup;
+namespace Magehqm2\Core\Setup;
 
 use Magento\Framework\Setup\ModuleContextInterface;
 use Magento\Framework\Setup\SchemaSetupInterface;
@@ -33,9 +33,9 @@ class UpgradeSchema implements UpgradeSchemaInterface
         $installer = $setup;
         $installer->startSetup();
 
-        $setup->getConnection()->dropTable($setup->getTable('magehq_core_license'));
+        $setup->getConnection()->dropTable($setup->getTable('magehqm2_core_license'));
         $table = $installer->getConnection()->newTable(
-            $installer->getTable('magehq_core_license')
+            $installer->getTable('magehqm2_core_license')
             )
         ->addColumn(
             'license_id',
@@ -66,7 +66,7 @@ class UpgradeSchema implements UpgradeSchemaInterface
             'Status'
             )
         ->addIndex(
-            $setup->getIdxName('magehq_core_license', ['license_id']),
+            $setup->getIdxName('magehqm2_core_license', ['license_id']),
             ['license_id']
             );
         $installer->getConnection()->createTable($table);

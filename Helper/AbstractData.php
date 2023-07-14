@@ -1,10 +1,10 @@
 <?php
 /**
- * Magehq
+ * Magehqm2
  * 
  * NOTICE OF LICENSE
  * 
- * This source file is subject to the Magehq.com license that is
+ * This source file is subject to the Magehqm2.com license that is
  * available through the world-wide-web at this URL:
  * https://magehq.com/license.html
  * 
@@ -13,13 +13,13 @@
  * Do not edit or add to this file if you wish to upgrade this extension to newer
  * version in the future.
  * 
- * @category   Magehq
- * @package    Magehq_Seo
- * @copyright  Copyright (c) 2022 Magehq (https://magehq.com/)
+ * @category   Magehqm2
+ * @package    Magehqm2_Seo
+ * @copyright  Copyright (c) 2022 Magehqm2 (https://magehq.com/)
  * @license    https://magehq.com/license.html
  */
  
-namespace Magehq\Core\Helper;
+namespace Magehqm2\Core\Helper;
 
 use Magento\Framework\App\Helper\AbstractHelper;
 use Magento\Store\Model\StoreManagerInterface;

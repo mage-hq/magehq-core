@@ -1,6 +1,6 @@
 <?php
 /**
- * Magehq
+ * Magehqm2
  * 
  * NOTICE OF LICENSE
  * 
@@ -13,13 +13,13 @@
  * Do not edit or add to this file if you wish to upgrade this extension to newer
  * version in the future.
  * 
- * @category   magehq
- * @package    Magehq_Core
- * @copyright  Copyright (c) 2022 magehq (https://magehq.com/)
+ * @category   magehqm2
+ * @package    Magehqm2_Core
+ * @copyright  Copyright (c) 2022 magehqm2 (https://magehq.com/)
  * @license    https://magehq.com/license.html
  */
 
-namespace Magehq\Core\Block\Adminhtml\System;
+namespace Magehqm2\Core\Block\Adminhtml\System;
 use Magento\Framework\App\Filesystem\DirectoryList;
 
 class ListLicense extends \Magento\Config\Block\System\Config\Form\Field
@@ -39,14 +39,14 @@ class ListLicense extends \Magento\Config\Block\System\Config\Form\Field
      * [__construct description]
      * @param \Magento\Backend\Block\Template\Context              $context 
      * @param \Magento\Framework\App\ResourceConnection            $resource      
-     * @param \Magehq\Core\Helper\Data                                 $helper        
+     * @param \Magehqm2\Core\Helper\Data                                 $helper        
      * @param \Magento\Framework\HTTP\PhpEnvironment\RemoteAddress $remoteAddress 
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
         \Magento\Framework\App\ResourceConnection $resource,
-        \Magehq\Core\Helper\Data $helper,
-        \Magehq\Core\Model\License $license,
+        \Magehqm2\Core\Helper\Data $helper,
+        \Magehqm2\Core\Model\License $license,
         \Magento\Framework\HTTP\Client\Curl $curl,
         \Magento\Framework\HTTP\PhpEnvironment\RemoteAddress $remoteAddress
         )
@@ -61,7 +61,7 @@ class ListLicense extends \Magento\Config\Block\System\Config\Form\Field
 
     public function getListLicenseFiles() {
         if(!$this->_list_files) {
-            $path = $this->_filesystem->getDirectoryRead(DirectoryList::APP)->getAbsolutePath('code/Magehq/');
+            $path = $this->_filesystem->getDirectoryRead(DirectoryList::APP)->getAbsolutePath('code/Magehqm2/');
             $files = glob($path . '*/*/license.xml');
            
 
@@ -126,12 +126,12 @@ class ListLicense extends \Magento\Config\Block\System\Config\Form\Field
 
         if(!empty($extensions)){
             $connection = $this->_resource->getConnection();
-            $html .= '<h1 class="magehq-tt">MAGEHQ Licenses</h1>';
-            $html .= '<div class="magehq-license">';
+            $html .= '<h1 class="magehqm2-tt">MAGEHQ Licenses</h1>';
+            $html .= '<div class="magehqm2-license">';
 
             foreach ($extensions as $_extension) {
                 $name = str_replace('[licenses]', '[' . str_replace(['-','_',' '], [''], $_extension['sku']) . ']', $element->getName());
-                $value = $this->_helper->getConfig('general/' . str_replace(['-','_',' '], [''], $_extension['sku']),'magehqlicense',null);
+                $value = $this->_helper->getConfig('general/' . str_replace(['-','_',' '], [''], $_extension['sku']),'magehqm2license',null);
 
                 if(!$value && isset($_extension['key_license']) && $_extension['key_license']){
                     $value = $_extension['key_license'];
@@ -159,8 +159,8 @@ class ListLicense extends \Magento\Config\Block\System\Config\Form\Field
                     $license['is_valid'] = 1;
                 }
 
-                $html .= '<div class="magehq-vitem">';
-                $html .= '<div class="magehq-img">';
+                $html .= '<div class="magehqm2-vitem">';
+                $html .= '<div class="magehqm2-img">';
                 $html .= '<a href="' . $_extension['purl'] . '" target="_blank" title="' . $_extension['name'] . '"><img src="' .  $_extension['pimg'] . '"/></a>';
                 $html .= '</div>';
                 $html .= '<div class="pdetails">';
@@ -328,7 +328,7 @@ class ListLicense extends \Magento\Config\Block\System\Config\Form\Field
             $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
             $directory = $objectManager->get('\Magento\Framework\Filesystem\DirectoryList');
             $base_url = $directory->getRoot();
-            $this->_key_path = $base_url."/magehqlicense/cacert.pem";
+            $this->_key_path = $base_url."/magehqm2license/cacert.pem";
         }
         return $this->_key_path;
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!--
 /**
- * Magehq
+ * Magehqm2
  * 
  * NOTICE OF LICENSE
  * 
@@ -14,14 +14,14 @@
  * Do not edit or add to this file if you wish to upgrade this extension to newer
  * version in the future.
  * 
- * @category   magehq
- * @package    Magehq_Core
- * @copyright  Copyright (c) 2022 magehq (https://magehq.com/)
+ * @category   magehqm2
+ * @package    Magehqm2_Core
+ * @copyright  Copyright (c) 2022 magehqm2 (https://magehq.com/)
  * @license    https://magehq.com/license.html
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
 	<event name="admin_system_config_save">
-		<observer name="magehq_save_license_key" instance="Magehq\Core\Observer\AdminSystemConfigSave"/>
+		<observer name="magehqm2_save_license_key" instance="Magehqm2\Core\Observer\AdminSystemConfigSave"/>
 	</event>
 </config>

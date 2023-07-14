@@ -1,6 +1,6 @@
 <?php
 /**
- * Magehq
+ * Magehqm2
  * 
  * NOTICE OF LICENSE
  * 
@@ -13,13 +13,13 @@
  * Do not edit or add to this file if you wish to upgrade this extension to newer
  * version in the future.
  * 
- * @category   magehq
- * @package    Magehq_Core
- * @copyright  Copyright (c) 2022 magehq (https://magehq.com/)
+ * @category   magehqm2
+ * @package    Magehqm2_Core
+ * @copyright  Copyright (c) 2022 magehqm2 (https://magehq.com/)
  * @license    https://magehq.com/license.html
  */
 
-namespace Magehq\Core\Observer;
+namespace Magehqm2\Core\Observer;
 
 use Magento\Framework\Event\ObserverInterface;
 use Magento\Framework\Module\Dir;
@@ -27,7 +27,7 @@ use Magento\Framework\Module\Dir;
 class CheckLicense implements ObserverInterface
 {
 	/**
-     * @var \Magehq\Core\Model\License
+     * @var \Magehqm2\Core\Model\License
      */
 	protected $_license;
 
@@ -42,18 +42,18 @@ class CheckLicense implements ObserverInterface
 	protected $_remoteAddress;
 
 	/**
-	 * @param \Magehq\Core\Model\License                               $license        
+	 * @param \Magehqm2\Core\Model\License                               $license        
 	 * @param \Magento\Framework\Module\Dir\Reader                 $moduleReader   
 	 * @param \Magento\Store\Model\StoreManagerInterface           $storeManager   
 	 * @param \Magento\Framework\HTTP\PhpEnvironment\RemoteAddress $remoteAddress  
 	 * @param \Magento\Framework\Message\ManagerInterface          $messageManager 
 	 */
 	public function __construct(
-		\Magehq\Core\Model\License $license,
+		\Magehqm2\Core\Model\License $license,
 		\Magento\Store\Model\StoreManagerInterface $storeManager,
 		\Magento\Framework\HTTP\PhpEnvironment\RemoteAddress $remoteAddress,
 		\Magento\Framework\Message\ManagerInterface $messageManager,
-		\Magehq\Core\Helper\Data $licenseHelper
+		\Magehqm2\Core\Helper\Data $licenseHelper
 		) {
 		$this->_license       = $license;
 		$this->messageManager = $messageManager;

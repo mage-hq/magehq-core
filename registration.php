@@ -14,13 +14,13 @@
  * version in the future.
  * 
  * @category   Mageqh
- * @package    Magehq_Core
- * @copyright  Copyright (c) 2022 Magehq (https://magehq.com/)
+ * @package    Magehqm2_Core
+ * @copyright  Copyright (c) 2022 Magehqm2 (https://magehq.com/)
  * @license    https://magehq.com/license.html
  */
 
 \Magento\Framework\Component\ComponentRegistrar::register(
     \Magento\Framework\Component\ComponentRegistrar::MODULE,
-    'Magehq_Core',
+    'Magehqm2_Core',
     __DIR__
 );
