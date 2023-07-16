@@ -4,6 +4,7 @@
   "type": "magento2-module",
   "minimum-stability": "dev",
   "version": "1.0.0",
+  "minimum-stability": "dev",
   "license": "proprietary",
   "minimum-stability": "dev",
   "authors": [
