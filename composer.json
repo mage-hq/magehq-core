@@ -2,9 +2,11 @@
   "name": "magehqm2/module-core",
   "description": "Magehq Core for Magento 2",
   "type": "magento2-module",
+  "minimum-stability": "dev",
   "version": "1.0.0",
   "minimum-stability": "dev",
   "license": "proprietary",
+  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Magehqm2",
