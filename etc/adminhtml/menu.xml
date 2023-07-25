@@ -21,9 +21,9 @@
  */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
-   <menu>
+   	<menu>
 		<add id="Magehqm2_Core::magehqm2_core" title="Magehqm2"  translate="title" module="Magehqm2_Core"  dependsOnModule="Magehqm2_Core" sortOrder="20" resource="Magehqm2_Core::magehqm2_core"/>
-      <add id="Magehqm2_Core::core" title="Magehqm2 Core"  translate="title" module="Magehqm2_Core" sortOrder="0" resource="Magehqm2_Core::core" parent="Magehqm2_Core::magehqm2_core"/>
-      <add id="Magehqm2_Core::config_license" title="Setting License" module="Magehqm2_Core" sortOrder="1" parent="Magehqm2_Core::core" action="adminhtml/system_config/edit/section/magehqm2license" resource="Magehqm2_Core::config_license"/> 
+
+      <add id="Magehqm2_Core::core" title="Magehqm2 Core"  translate="title" module="Magehqm2_Core" sortOrder="0" resource="Magehqm2_Core::core" parent="Magehqm2_Core::magehqm2_core"/>    
 	</menu>
 </config>
